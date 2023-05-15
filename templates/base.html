@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Budget Tracker</title>
+    <!-- Include CSS and JavaScript files here -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <!-- Include header content here -->
+        <h1>Budget Tracker</h1>
+    </header>
+
+    <div class="container">
+        <!-- Include content from other templates here -->
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <footer>
+        <!-- Include footer content here -->
+        <p>&copy; 2023 Budget Tracker</p>
+    </footer>
+
+    <!-- Include additional JavaScript files here -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
