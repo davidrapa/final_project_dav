@@ -8,7 +8,6 @@ def home():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        # Process login form submission
         username = request.form.get('username')
         password = request.form.get('password')
         # Check username and password validity
@@ -61,12 +60,8 @@ def logout():
 
 # Helper functions
 def valid_login(username, password):
-    # Validate username and password against database or other data source
-    # Return True if login is valid, False otherwise
+
     return True
 
 def valid_registration(username, password):
-    # Validate username and password for registration
-    # Register user in the database or other data source
-    # Return True if registration is successful, False otherwise
     return True
