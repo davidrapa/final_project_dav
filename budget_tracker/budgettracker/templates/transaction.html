@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transactions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
+            <li><a href="{{ url_for('home') }}">Dashboard</a></li>
+            <li><a href="{{ url_for('settings') }}">Settings</a></li>
+        </ul>
+    </nav>
+    <div class="transaction-container">
+        <h2>Transaction</h2>
+        <form>
+            <label for="amount">Amount</label>
+            <input type="text" id="amount" name="amount" placeholder="Transaction amount..">
+
+            <label for="type">Transaction Type</label>
+            <select id="type" name="type">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+
+            <label for="category">Category</label>
+            <select id="category" name="category">
+                <option value="food">Food</option>
+                <option value="entertainment">Entertainment</option>
+                <!-- Other categories... -->
+            </select>
+
+            <input class="button" type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

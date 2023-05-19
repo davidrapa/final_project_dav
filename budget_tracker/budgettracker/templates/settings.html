@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Settings</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
+            <li><a href="{{ url_for('home') }}">Dashboard</a></li>
+            <li><a href="{{ url_for('settings') }}">Settings</a></li>
+        </ul>
+    </nav>
+    <div class="settings-container">
+        <h2>Settings</h2>
+        <form>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Your username..">
+
+            <label for="old-password">Old Password</label>
+            <input type="password" id="old-password" name="old-password" placeholder="Your old password..">
+
+            <label for="new-password">New Password</label>
+            <input type="password" id="new-password" name="new-password" placeholder="Your new password..">
+
+            <input class="button" type="submit" value="Change Password">
+        </form>
+        <a href="{{ url_for('dashboard') }}"><button class="button">Dashboard</button></a>
+    </div>
+</body>
+</html>
